@@ -1,73 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    
+    <title>Online Hangman</title>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <link rel="javascript" type="text/javascript" href="assets/javascript/game.js">
 </head>
+
 <div class="wrapper">
 <body>
    <h1>Hangman</h1>
-   <h2>Boot Camp Hangman</h2>
+   <h2>Music Hangman</h2>
    <p>
        Cick on an alphabet to guess or hint to get a clue
    </p>
    </div>
-    <div class="wrapper">
-        <div id="button">
-            <ul id="alphabets">
-                <li id="letter">a</li>
-                <li id="letter">b</li>
-                <li id="letter">c</li>
-                <li id="letter">d</li>
-                <li id="letter">e</li>
-                <li id="letter">f</li>
-                <li id="letter">g</li>
-                <li id="letter">h</li>
-                <li id="letter">i</li>
-                <li id="letter">j</li>
-                <li id="letter">k</li>
-                <li id="letter">l</li>
-                <li id="letter">m</li>
-                <li id="letter">n</li>
-                <li id="letter">o</li>
-                <li id="letter">p</li>
-                <li id="letter">q</li>
-                <li id="letter">r</li>
-                <li id="letter">s</li>
-                <li id="letter">t</li>
-                <li id="letter">u</li>
-                <li id="letter">v</li>
-                <li id="letter">w</li>
-                <li id="letter">x</li>
-                <li id="letter">y</li>
-                <li id="letter">z</li>
-            </ul>
-    </div>
-    <p id="category">The category is Name of a DJ</p>
-        <div id ="emptyspaces">
-        <ul id="Chainsmokers">
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-            <li class="guess">__</li>
-        </ul>
+   <div class ="Container">
+       <div class="row">
+           <div class="col">
+<canvas id="hangman" width="300px" height="300px"></canvas>
         </div>
+        <div class="col">
+<p id="category"></p>
+    <div id ="wordWrap">
+        <div id="space1">
+            <div id="guess1"></div>
+       </div>
+       <div id="space2">
+            <div id="guess2"></div>
+       <div>
+        <div id="space3">
+            <div id="guess3"></div>
+        </div>
+        <div id="space4">
+            <div id="guess4"></div>
+        </div>
+        <div id="space5">
+            <div id="guess5"></div>
+        </div>
+        <div id="space6">
+            <div id="guess6"></div>
+        </div>
+        <div id="space7">
+            <div id="guess7"></div>
+        </div>
+        <div id="space8">
+            <div id="guess8"></div>
+        </div>
+        <div id="space9">
+            <div id="guess9"></div>
+        </div>
+        <div id="space10">
+            <div id="guess10"></div>
+</div>
+
     <p id="clue"></p>
     <p id="Lives">You have 10 lives</p>
-    <canvas id="hang"></canvas>
+    <div id="results"></div>
+    <div id="letterBank">
+            <div id="a" value="A" onclick="guessLetter()">A</div><div id="b" value="B" onclick="guessLetter()">B</div><div id="c" value="C" onclick="guessLetter()">C</div><div id="d" value="D" onclick="guessLetter()">D</div><div id="e" value="E" onclick="guessLetter()">E</div><div id="f" value="F" onclick="guessLetter()">F</div><div id="g" value="G" onclick="guessLetter()">G</div><div id="h" value="H" onclick="guessLetter()">H</div><div id="i" value="I" onclick="guessLetter()">I</div><div id="j" value="J" onclick="guessLetter()">J</div><div id="k" value="K" onclick="guessLetter()">K</div><div id="l" value="L" onclick="guessLetter()">L</div><div id="m" value="M" onclick="guessLetter()">M</div><div id="n" value="N" onclick="guessLetter()">N</div><div id="o" value="O" onclick="guessLetter()">O</div><div id="p" value="P" onclick="guessLetter()">P</div><div id="q" value="Q" onclick="guessLetter()">Q</div><div id="r" value="R" onclick="guessLetter()">R</div><div id="s" value="S" onclick="guessLetter()">S</div><div id="t" value="T" onclick="guessLetter()">T</div><div id="u" value="U" onclick="guessLetter()">U</div><div id="v" value="V" onclick="guessLetter()">V</div><div id="w" value="W" onclick="guessLetter()">W</div><div id="x" value="X" onclick="guessLetter()">X</div><div id="y" value="Y" onclick="guessLetter()">Y</div><div id="z" value="Z" onclick="guessLetter()">Z</div>
+    </div>
+    <div id="again" onClick="reset()">Play again!</div>
+    </div>
 <div class="Container">
     <button type="button" class="btn btn-outline-dark">Hint</button>
     <button type="button" class="btn btn-outline-dark">Play Again</button>
